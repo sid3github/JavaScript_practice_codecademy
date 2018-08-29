@@ -70,9 +70,47 @@ switch(randomNumber){
 
 console.log(magicFiveBall);
 
+// Race Day
+let raceNumber = Math.floor(Math.random() * 1000);
+
+let  runner = false;
+runner ? console.log('Early Registered') : console.log('Late Registered');
+console.log(runner);
+
+let runnerAge = 18;
+
+if (runnerAge > 18 && runner == true){
+  raceNumber += 1000;
+}
+if (runnerAge > 18 && runner == true){
+console.log('your race will start at 9:30 and your race number is ' + raceNumber);
+}
+else if (runnerAge > 18 && runner != true){
+  raceNumber += 1000;
+  console.log('your race will start at 11:00 and your race number is ' + raceNumber);
+}
+else if (runnerAge < 18){
+  raceNumber;
+  console.log('your race will start at 12:30 and your race number is ' + raceNumber);
+}
+else{
+  console.log('please go to the registration desk');
+}
 
 
+//Taking orders.
+let orderCount = 0;
 
+const takeOrder = (topping, crustType) => {
+  console.log(orderCount);
+  console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+  orderCount++;
+  
+};
+
+takeOrder('mushroom', 'thin crust');
+takeOrder('spinach', 'whole wheat');
+takeOrder('pepperoni', 'brooklyn style');
 
 
 
