@@ -123,7 +123,10 @@ const getTotal = (itemCount) => {
 console.log(getSubTotal(orderCount));
 console.log(getTotal(orderCount));
 
-// Rock, paper and scissors.
+
+
+// Rock, Paper and Scissors Game.
+
 const getUserChoice = (userInput) => {
     let data = userInput.toLowerCase();
  if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors'){
@@ -132,16 +135,65 @@ const getUserChoice = (userInput) => {
    console.log('error,please enter correct input');
  }
 };
-console.log(getUserChoice('rock'));
+//console.log(getUserChoice('rock'));
 
 const getComputerChoice = () => {
  let info = Math.floor(Math.random() * 3);
  switch(info){
-     
+   case 0:
+     return 'rock';
+     break;
+   case 1:
+     return 'paper';
+     break;
+   case 2:
+     return 'scissor';
+     break;
  }
 };
-getComputerChoice();
+//console.log(getComputerChoice());
 
+const determineWinner = (userChoice,computerChoice) => {
+ if(userChoice === computerChoice){
+   return 'the game was a tie';
+ }
+ 
+ if(userChoice === 'rock'){
+        if(computerChoice === 'paper'){
+     return 'computer won';
+   }else{
+     return 'user won';
+   }   
+ }
+ 
+ if(userChoice === 'paper'){
+   if(computerChoice === 'rock'){
+     return 'user won';
+   }
+   else if(computerChoice === 'scissor'){
+     return 'computer won';
+   }
+ }
+ 
+ if(userChoice === 'scissor'){
+   if(computerChoice === 'rock'){
+     return 'computer won';
+   }
+   else if(computerChoice === 'paper'){
+     return 'user won';
+   }
+ }
+};
+//console.log(determineWinner('paper','rock'));
+
+
+const playGame = () => {
+ let userChoice = getUserChoice('rock');
+ let computerChoice = getComputerChoice();
+ console.log(determineWinner(userChoice,computerChoice));
+};
+
+playGame();
 
 
 
