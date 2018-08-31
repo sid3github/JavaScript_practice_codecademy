@@ -123,6 +123,24 @@ const getTotal = (itemCount) => {
 console.log(getSubTotal(orderCount));
 console.log(getTotal(orderCount));
 
+// Rock, paper and scissors.
+const getUserChoice = (userInput) => {
+    let data = userInput.toLowerCase();
+ if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors'){
+  return userInput;
+ }else{
+   console.log('error,please enter correct input');
+ }
+};
+console.log(getUserChoice('rock'));
+
+const getComputerChoice = () => {
+ let info = Math.floor(Math.random() * 3);
+ switch(info){
+     
+ }
+};
+getComputerChoice();
 
 
 
