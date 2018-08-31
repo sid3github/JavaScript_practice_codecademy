@@ -158,19 +158,19 @@ const determineWinner = (userChoice,computerChoice) => {
    return 'the game was a tie';
  }
  
- if(userChoice === 'rock'){
-        if(computerChoice === 'paper'){
+ if(userChoice === 'rock'){ // if user places rock.
+        if(computerChoice === 'paper'){ // if comp places paper.
      return 'computer won';
    }else{
      return 'user won';
    }   
  }
  
- if(userChoice === 'paper'){
-   if(computerChoice === 'rock'){
+ if(userChoice === 'paper'){ // if user places paper.
+   if(computerChoice === 'rock'){ // if comp places rock.
      return 'user won';
    }
-   else if(computerChoice === 'scissor'){
+   else if(computerChoice === 'scissor'){ // also if comp places scissor.
      return 'computer won';
    }
  }
