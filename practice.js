@@ -175,11 +175,11 @@ const determineWinner = (userChoice,computerChoice) => {
    }
  }
  
- if(userChoice === 'scissor'){
-   if(computerChoice === 'rock'){
+ if(userChoice === 'scissor'){ // if user places scissor.
+   if(computerChoice === 'rock'){// if comp places rock.
      return 'computer won';
    }
-   else if(computerChoice === 'paper'){
+   else if(computerChoice === 'paper'){// if comp places paper.
      return 'user won';
    }
  }
@@ -209,3 +209,4 @@ playGame();
 
 
 
+ 
