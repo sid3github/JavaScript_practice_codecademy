@@ -196,7 +196,19 @@ const playGame = () => {
 playGame();
 
 
+//Data Structures: Copy an Array with the Spread Operator.
 
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    newArr = [[...arr],...newArr];
+    num--;
+  }
+  return newArr;
+}
+
+console.log(copyMachine([true, false, true], 2));
+console.log(copyMachine(['it works'], 3));
 
 
 
